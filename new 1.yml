@@ -24,9 +24,9 @@ Resources:
       KeyName: chand
       SecurityGroupIds:
         - !Ref MySecurityGroup
-      ImageId: ami-06e383b56033e3f71  # Amazon Linux 2 AMI in (update if needed)
+      ImageId: ami-06e383b56033e3f71 # Amazon Linux 2 AMI in (update if needed)
       Tags:
         - Key: Name
-          Value: pratice-demo
+          Value: demo2
 
 
