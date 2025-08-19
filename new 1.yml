@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: EC2 Instance
+
+Resources:
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+ 
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      KeyName: chand
+      SecurityGroupIds:
+        - !Ref MySecurityGroup
+      ImageId: ami-06e383b56033e3f71  # Amazon Linux 2 AMI in (update if needed)
+      Tags:
+        - Key: Name
+          Value: pratice-demo
+
+
