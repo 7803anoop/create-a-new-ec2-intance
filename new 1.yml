@@ -20,13 +20,11 @@ Resources:
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      InstanceType: t3.micro
+      InstanceType: t2.micro
       KeyName: chand
       SecurityGroupIds:
         - !Ref MySecurityGroup
       ImageId: ami-06e383b56033e3f71 # Amazon Linux 2 AMI in (update if needed)
       Tags:
         - Key: Name
-          Value: demo2
-
-
+          Value: rahul-ec2
