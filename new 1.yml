@@ -23,4 +23,5 @@ Resources:
       ImageId: ami-06e383b56033e3f71 # Amazon Linux 2 AMI in (update if needed)
       Tags:
         - Key: Name
-          Value: rahul-ec2
+          Value: rahul-main
+          
